@@ -1,0 +1,27 @@
+<resources>
+    <string name="app_name">RT Vote</string>
+    <string name="desc_logo">logo rt_vote</string>
+    <string name="rt_vote">RT-Vote</string>
+    <string name="welcome_word">Silahkan masuk dengan nik atau email yang telah terdaftar pada sistem RT-Vote</string>
+    <string name="nik_email">NIK/Email</string>
+    <string name="hint_nik_email">Masukan NIK atau Email</string>
+    <string name="nama">Nama Lengkap</string>
+    <string name="hint_nama">Masukkan Nama</string>
+    <string name="btn_login">MASUK</string>
+    <string name="login_pemilih">Login Pemilih</string>
+    <string name="info_app">Aplikasi RT-Vote Merupakan Aplikasi voting online yang diperuntukan pemilihan ketua RT. Untuk memilih silahkan klik salah satu calon RT dibawah ini untuk di vote.</string>
+    <string name="info_succes_vote">Terima Kasih Telah memillih Calon Ketua RT dan tidak memilih menjadi Golput.</string>
+    <string name="logo_succes_vote">logo_succes_vote</string>
+    <string name="calon_ketua_rt">Calon Ketua RT</string>
+    <string name="nama_holder">Sanjaya S.Pd</string>
+    <string name="nocalon_holder">01</string>
+    <string name="informasi">Informasi</string>
+    <string name="vote">Vote</string>
+    <string name="kembali">Kembali</string>
+    <string name="ttl_holder">Samarinda, 16 Juni 1998</string>
+    <string name="desc_logo_no_vote">logo_no_vote</string>
+    <string name="info_no_vote">Sepertinya periode ini belum ada pemilihan atau pemilihan calon ketua RT sedang ditutup dan belum dibuka</string>
+    <string name="visi_calon_ketua_rt">Visi Calon Ketua RT</string>
+    <string name="info_visi">visi dari calon ketua RT yang masuk dalam pemilihan</string>
+    <string name="periode_holder">2020 - 2021</string>
+</resources>
