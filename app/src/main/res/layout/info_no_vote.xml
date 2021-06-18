@@ -7,7 +7,7 @@
     android:layout_height="wrap_content">
 
     <ImageView
-        android:id="@+id/imageView2"
+        android:id="@+id/on_going_vote"
         android:layout_width="match_parent"
         android:layout_height="253dp"
         android:layout_marginTop="16dp"
@@ -18,7 +18,7 @@
         android:contentDescription="@string/desc_logo_no_vote" />
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/periode_aktif"
         android:layout_width="411dp"
         android:layout_height="0dp"
         android:layout_marginTop="16dp"
@@ -29,6 +29,6 @@
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView2" />
+        app:layout_constraintTop_toBottomOf="@+id/on_going_vote" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

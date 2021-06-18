@@ -45,7 +45,7 @@ public class KandidatAdapter extends RecyclerView.Adapter<KandidatAdapter.ViewHo
     @Override
     public void onBindViewHolder(@NonNull KandidatAdapter.ViewHolder holder, int position) {
         holder.noUrut.setText("No Urut: 0"+kandidatList.get(position).getNoCalon());
-        holder.namaCalon.setText(kandidatList.get(position).getNama());
+        holder.namaCalon.setText(kandidatList.get(position).getPenduduk().getNama());
         Picasso.get()
                 .load(URL_WEB + kandidatList.get(position).getFoto())
                 .fit()
@@ -58,10 +58,11 @@ public class KandidatAdapter extends RecyclerView.Adapter<KandidatAdapter.ViewHo
             public void onClick(View view) {
                 Intent intent = new Intent(activity, DetailKandidatActivity.class);
                 intent.putExtra("no_urut", kandidatList.get(position).getNoCalon());
-                intent.putExtra("nama", kandidatList.get(position).getNama());
+                intent.putExtra("nama", kandidatList.get(position).getPenduduk().getNama());
                 intent.putExtra("foto", kandidatList.get(position).getFoto());
                 intent.putExtra("visi", kandidatList.get(position).getVisi());
                 intent.putExtra("periode", kandidatList.get(position).getPeriode().getKeterangan());
+                intent.putExtra("periode_id", kandidatList.get(position).getPeriode().getId());
                 intent.putExtra("id_kandidat", kandidatList.get(position).getId());
                 activity.startActivity(intent);
             }

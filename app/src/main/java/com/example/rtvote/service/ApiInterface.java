@@ -1,5 +1,6 @@
 package com.example.rtvote.service;
 
+import com.example.rtvote.service.response.hasil.ResponseHasilVote;
 import com.example.rtvote.service.response.kandidat.ResponseKandidat;
 import com.example.rtvote.service.response.loginwarga.ResponseLoginWarga;
 import com.example.rtvote.service.response.vote.ResponseVote;
@@ -28,6 +29,9 @@ public interface ApiInterface {
             @Field("kandidat_id") int kandidat,
             @Field("periode_id") int periode
     );
+
+    @GET("hasil_votings")
+    Call<ResponseHasilVote> getHasilVote();
 //
 //
 //    @FormUrlEncoded

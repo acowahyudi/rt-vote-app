@@ -9,12 +9,13 @@
     <string name="hint_nama">Masukkan Nama</string>
     <string name="btn_login">MASUK</string>
     <string name="login_pemilih">Login Pemilih</string>
-    <string name="info_app">Aplikasi RT-Vote Merupakan Aplikasi voting online yang diperuntukan pemilihan ketua RT. Untuk memilih silahkan klik salah satu calon RT dibawah ini untuk di vote.</string>
+    <string name="info_app">Aplikasi RT-Vote merupakan aplikasi voting online yang diperuntukan pemilihan ketua RT. Untuk memilih silahkan klik salah satu calon RT dibawah ini untuk di vote.</string>
     <string name="info_succes_vote">Terima Kasih Telah memillih Calon Ketua RT dan tidak memilih menjadi Golput.</string>
     <string name="logo_succes_vote">logo_succes_vote</string>
     <string name="calon_ketua_rt">Calon Ketua RT</string>
     <string name="nama_holder">Sanjaya S.Pd</string>
-    <string name="nocalon_holder">01</string>
+    <string name="nocalon_holder">No Urut : 01</string>
+    <string name="nocalon_holder2">01</string>
     <string name="informasi">Informasi</string>
     <string name="vote">Vote</string>
     <string name="kembali">Kembali</string>
@@ -24,4 +25,12 @@
     <string name="visi_calon_ketua_rt">Visi Calon Ketua RT</string>
     <string name="info_visi">visi dari calon ketua RT yang masuk dalam pemilihan</string>
     <string name="periode_holder">2020 - 2021</string>
+    <string name="btn_cek_hasil_voting">Cek Hasil Voting</string>
+    <string name="jumlah_suara_holder">Jumlah Vote : 13 Suara</string>
+    <string name="presentasi_holder">Presentase Suara : 65.23%</string>
+    <string name="logo_ongoing_vote">logo_ongoing_vote</string>
+    <string name="remain_day_holder">14 hari lagi sebelum penutupan voting</string>
+    <string name="voting_masih_berlangsung">Voting Masih berlangsung</string>
+    <string name="btn_beranda">Beranda</string>
+    <string name="greeting_user">Selamat datang, Yudi..</string>
 </resources>

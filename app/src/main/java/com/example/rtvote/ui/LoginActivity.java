@@ -8,7 +8,6 @@ import android.text.InputType;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
-import android.widget.CompoundButton;
 import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.TextView;
@@ -42,13 +41,6 @@ public class LoginActivity extends AppCompatActivity {
         rbEmail = findViewById(R.id.rb_email);
         rbNik = findViewById(R.id.rb_nik);
         label = findViewById(R.id.label_email_nik);
-        login.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                final String nikEmail = edNikEmail.getText().toString();
-                responseLogin(nikEmail);
-            }
-        });
         rbEmail.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -83,6 +75,13 @@ public class LoginActivity extends AppCompatActivity {
                 }
             }
         });
+        login.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                final String nikEmail = edNikEmail.getText().toString();
+                responseLogin(nikEmail);
+            }
+        });
     }
 
     private void responseLogin(String nikEmail) {
@@ -92,7 +91,7 @@ public class LoginActivity extends AppCompatActivity {
             public void onResponse(Call<ResponseLoginWarga> call, Response<ResponseLoginWarga> response) {
                 if (response.isSuccessful()){
                     assert response.body() != null;
-                    if (response.body().getData()!= null){
+                    if (response.body().getData() != null && response.body().isSuccess()){
                         Log.i("DATA USER",response.body().getData().toString());
                         PrefManager prefManager = new PrefManager(getApplicationContext());
                         prefManager.setInt(Const.ID_USER, response.body().getData().getId());
@@ -107,6 +106,12 @@ public class LoginActivity extends AppCompatActivity {
                                 .setContentText("User Tidak Terdaftar \n (Cek kembali Nik dan Nama)")
                                 .show();
                     }
+                }if (response.code()==500){
+                    new SweetAlertDialog(LoginActivity.this, SweetAlertDialog.ERROR_TYPE)
+                            .setTitleText("Peringatan")
+                            .setContentText("Server bermasalah")
+                            .show();
+
                 }
             }
 

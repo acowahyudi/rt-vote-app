@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout
-    android:id="@+id/info_success_vote"
+    android:id="@+id/info_vote_ongoing"
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
@@ -10,12 +10,12 @@
         android:id="@+id/on_going_vote"
         android:layout_width="match_parent"
         android:layout_height="253dp"
-        android:layout_marginTop="16dp"
-        android:src="@drawable/ic_success"
+        android:layout_marginTop="64dp"
+        android:src="@drawable/ic_sand_clock"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        android:contentDescription="@string/logo_succes_vote" />
+        android:contentDescription="@string/logo_ongoing_vote" />
 
     <TextView
         android:id="@+id/periode_aktif"
@@ -25,25 +25,37 @@
         android:paddingHorizontal="16dp"
         android:fontFamily="@font/titilliumweb_semibold"
         android:gravity="center"
-        android:text="@string/info_succes_vote"
-        android:textSize="18sp"
+        android:text="@string/voting_masih_berlangsung"
+        android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/on_going_vote" />
 
+    <TextView
+        android:id="@+id/remain_day"
+        android:layout_width="411dp"
+        android:layout_height="0dp"
+        android:paddingHorizontal="16dp"
+        android:fontFamily="@font/titilliumweb_semibold"
+        android:gravity="center"
+        android:text="@string/remain_day_holder"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/periode_aktif" />
+
     <Button
-        android:id="@+id/cek_hasil"
+        android:id="@+id/btn_beranda"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="20dp"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="16dp"
         android:background="@drawable/button_background_blue"
         android:fontFamily="@font/roboto_medium"
-        android:text="@string/btn_cek_hasil_voting"
+        android:text="@string/btn_beranda"
         android:textColor="@color/white"
-        android:layout_marginBottom="16dp"
         android:textSize="14sp"
         app:backgroundTint="#70B5E8"
-        app:layout_constraintTop_toBottomOf="@+id/periode_aktif"/>
+        app:layout_constraintTop_toBottomOf="@+id/remain_day"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

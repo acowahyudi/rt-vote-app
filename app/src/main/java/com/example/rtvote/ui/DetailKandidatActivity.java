@@ -54,7 +54,7 @@ public class DetailKandidatActivity extends AppCompatActivity {
         vote = findViewById(R.id.vote);
 
         periode.setText("Periode: "+extras.getString("periode"));
-        noUrut.setText(extras.getString("no_urut"));
+        noUrut.setText("0"+extras.getInt("no_urut"));
         namaCalon.setText(extras.getString("nama"));
         visi.setText(extras.getString("visi"));
         Picasso.get()
@@ -83,7 +83,7 @@ public class DetailKandidatActivity extends AppCompatActivity {
                             @Override
                             public void onClick(SweetAlertDialog sDialog) {
                                 PrefManager prefManager = new PrefManager(DetailKandidatActivity.this);
-                                int periode = extras.getInt("periode");
+                                int periode = extras.getInt("periode_id");
                                 int warga = prefManager.getInt(Const.ID_USER);
                                 int kandidat = extras.getInt("id_kandidat");
 
@@ -106,6 +106,11 @@ public class DetailKandidatActivity extends AppCompatActivity {
                                                             finish();
                                                         }
                                                     })
+                                                    .show();
+                                        }else if (response.code()==500){
+                                            new SweetAlertDialog(DetailKandidatActivity.this, SweetAlertDialog.ERROR_TYPE)
+                                                    .setTitleText("Peringatan")
+                                                    .setContentText("Gagal vote kandidat, server bermasalah!")
                                                     .show();
                                         }
                                     }

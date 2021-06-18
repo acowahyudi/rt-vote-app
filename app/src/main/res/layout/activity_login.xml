@@ -18,8 +18,8 @@
             android:gravity="center">
             <ImageView
                 android:id="@+id/imageView"
-                android:layout_width="120dp"
-                android:layout_height="120dp"
+                android:layout_width="160dp"
+                android:layout_height="160dp"
                 android:layout_marginTop="50dp"
                 android:src="@drawable/logo" />
 
@@ -46,9 +46,10 @@
             <RadioGroup
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
+                android:layout_marginTop="16dp"
                 android:gravity="center_horizontal"
-                android:layout_marginTop="16dp">
+                android:orientation="horizontal"
+                android:theme="@style/ToolBarStyleLokal">
 
                 <RadioButton
                     android:id="@+id/rb_email"
@@ -57,16 +58,24 @@
                     android:layout_marginRight="16dp"
                     android:paddingHorizontal="8dp"
                     android:text="Email"
-                    android:textStyle="bold" />
+                    android:textColorLink="#52a5d8"
+                    android:textCursorDrawable="@drawable/button_background_blue"
+                    android:textStyle="bold"
+                    android:buttonTint="@color/colorSecondary"
+                    />
 
                 <RadioButton
                     android:id="@+id/rb_nik"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:paddingHorizontal="8dp"
                     android:layout_marginRight="16dp"
+                    android:paddingHorizontal="8dp"
                     android:text="NIK"
-                    android:textStyle="bold"/>
+                    android:textColorLink="#52a5d8"
+                    android:textCursorDrawable="@drawable/button_background_blue"
+                    android:textStyle="bold"
+                    android:buttonTint="@color/colorSecondary"
+                    />
             </RadioGroup>
 
             <TextView

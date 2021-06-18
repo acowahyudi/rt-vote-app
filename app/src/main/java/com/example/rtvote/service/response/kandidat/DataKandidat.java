@@ -4,14 +4,14 @@ import com.google.gson.annotations.SerializedName;
 
 public class DataKandidat {
 
-	@SerializedName("nama")
-	private String nama;
-
 	@SerializedName("foto")
 	private String foto;
 
 	@SerializedName("updated_at")
 	private String updatedAt;
+
+	@SerializedName("penduduk")
+	private Penduduk penduduk;
 
 	@SerializedName("periode_id")
 	private int periodeId;
@@ -34,12 +34,11 @@ public class DataKandidat {
 	@SerializedName("visi")
 	private String visi;
 
+	@SerializedName("penduduk_id")
+	private int pendudukId;
+
 	@SerializedName("periode")
 	private Periode periode;
-
-	public String getNama(){
-		return nama;
-	}
 
 	public String getFoto(){
 		return foto;
@@ -47,6 +46,10 @@ public class DataKandidat {
 
 	public String getUpdatedAt(){
 		return updatedAt;
+	}
+
+	public Penduduk getPenduduk(){
+		return penduduk;
 	}
 
 	public int getPeriodeId(){
@@ -75,6 +78,10 @@ public class DataKandidat {
 
 	public String getVisi(){
 		return visi;
+	}
+
+	public int getPendudukId(){
+		return pendudukId;
 	}
 
 	public Periode getPeriode(){
