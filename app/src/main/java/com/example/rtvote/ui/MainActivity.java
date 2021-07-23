@@ -48,7 +48,7 @@ public class MainActivity extends AppCompatActivity {
         PrefManager prf = new PrefManager(this);
         Toolbar myToolbar = findViewById(R.id.toolbar);
         setSupportActionBar(myToolbar);
-        myToolbar.setTitle("Selamat datang, "+prf.getString(Const.NAMA));
+        myToolbar.setTitle("Welcome, "+prf.getString(Const.NAMA));
         infoSuccess = findViewById(R.id.info_success_vote);
         infoNoVote = findViewById(R.id.info_no_vote);
         infoCalon = findViewById(R.id.info_calon);
