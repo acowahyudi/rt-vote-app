@@ -14,24 +14,24 @@ import retrofit2.http.POST;
 import retrofit2.http.Query;
 
 public interface ApiInterface {
-    @GET("penduduks")
+    @GET("users")
     Call<ResponseLoginWarga> getLoginWarga(
             @Query("nik_email")String nik_email
     );
 
     @GET("kandidats")
-    Call<ResponseKandidat> getKandidat(@Query("penduduk_id")int warga);
+    Call<ResponseKandidat> getKandidat(@Query("users_id")int warga);
 
     @FormUrlEncoded
     @POST("hasil_votings")
     Call<ResponseVote> postVote(
-            @Field("penduduk_id") int warga,
+            @Field("users_id") int warga,
             @Field("kandidat_id") int kandidat,
             @Field("periode_id") int periode
     );
 
     @GET("hasil_votings")
-    Call<ResponseHasilVote> getHasilVote();
+    Call<ResponseHasilVote> getHasilVote(@Query("users_id")int warga);
 //
 //
 //    @FormUrlEncoded

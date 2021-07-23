@@ -36,7 +36,7 @@ public class LoginActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         apiInterface = ApiClient.getClient().create(ApiInterface.class);
         setContentView(R.layout.activity_login);
-        edNikEmail = findViewById(R.id.nik_email);
+        edNikEmail = findViewById(R.id.nik_emails);
         login = findViewById(R.id.login);
         rbEmail = findViewById(R.id.rb_email);
         rbNik = findViewById(R.id.rb_nik);

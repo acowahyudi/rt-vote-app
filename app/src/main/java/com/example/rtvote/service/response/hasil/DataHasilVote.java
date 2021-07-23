@@ -13,7 +13,7 @@ public class DataHasilVote {
 	@SerializedName("deleted_at")
 	private Object deletedAt;
 
-	@SerializedName("penduduk_id")
+	@SerializedName("users_id")
 	private int pendudukId;
 
 	@SerializedName("periode")
@@ -25,7 +25,7 @@ public class DataHasilVote {
 	@SerializedName("updated_at")
 	private String updatedAt;
 
-	@SerializedName("penduduk")
+	@SerializedName("user")
 	private Penduduk penduduk;
 
 	@SerializedName("vote_count_persentasi")

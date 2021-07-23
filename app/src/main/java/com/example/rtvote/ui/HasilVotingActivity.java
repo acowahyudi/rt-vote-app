@@ -18,7 +18,10 @@ import com.example.rtvote.adapter.HasilAdapter;
 import com.example.rtvote.adapter.KandidatAdapter;
 import com.example.rtvote.service.ApiClient;
 import com.example.rtvote.service.ApiInterface;
+import com.example.rtvote.service.Const;
+import com.example.rtvote.service.PrefManager;
 import com.example.rtvote.service.response.hasil.ResponseHasilVote;
+import com.ontbee.legacyforks.cn.pedant.SweetAlert.SweetAlertDialog;
 
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -70,7 +73,8 @@ public class HasilVotingActivity extends AppCompatActivity {
     }
 
     private void cekHasilVote() {
-        Call<ResponseHasilVote> api = apiInterface.getHasilVote();
+        PrefManager prf = new PrefManager(this);
+        Call<ResponseHasilVote> api = apiInterface.getHasilVote(prf.getInt(Const.ID_USER));
         api.enqueue(new Callback<ResponseHasilVote>() {
             @Override
             public void onResponse(Call<ResponseHasilVote> call, Response<ResponseHasilVote> response) {
@@ -93,7 +97,10 @@ public class HasilVotingActivity extends AppCompatActivity {
 
             @Override
             public void onFailure(Call<ResponseHasilVote> call, Throwable t) {
-
+                new SweetAlertDialog(HasilVotingActivity.this, SweetAlertDialog.ERROR_TYPE)
+                        .setTitleText("Peringatan")
+                        .setContentText("Gangguan Server!")
+                        .show();
             }
         });
     }

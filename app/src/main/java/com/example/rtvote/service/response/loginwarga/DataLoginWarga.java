@@ -7,7 +7,7 @@ public class DataLoginWarga {
 	@SerializedName("nik")
 	private String nik;
 
-	@SerializedName("nama")
+	@SerializedName("name")
 	private String nama;
 
 	@SerializedName("tempat_lahir")

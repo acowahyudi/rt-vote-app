@@ -7,7 +7,7 @@ public class Penduduk{
 	@SerializedName("nik")
 	private String nik;
 
-	@SerializedName("nama")
+	@SerializedName("name")
 	private String nama;
 
 	@SerializedName("updated_at")

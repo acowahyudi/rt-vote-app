@@ -22,7 +22,7 @@ public class DataVote {
 	@SerializedName("deleted_at")
 	private Object deletedAt;
 
-	@SerializedName("penduduk_id")
+	@SerializedName("users_id")
 	private int pendudukId;
 
 	public String getUpdatedAt(){

@@ -10,7 +10,7 @@ public class DataKandidat {
 	@SerializedName("updated_at")
 	private String updatedAt;
 
-	@SerializedName("penduduk")
+	@SerializedName("user")
 	private Penduduk penduduk;
 
 	@SerializedName("periode_id")
